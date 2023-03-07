@@ -1,0 +1,38 @@
+wheel
+nbresult
+colorama
+ipdb
+ipykernel
+yapf
+#matplotlib
+pygeohash
+pytest
+#seaborn
+numpy==1.23.5
+pandas==1.5.3
+scikit-learn==1.2.1
+google-cloud-bigquery
+google-cloud-storage
+db-dtypes                  
+pyarrow
+
+transformers
+torch @ https://download.pytorch.org/whl/cu116/torch-1.13.1%2Bcu116-cp38-cp38-linux_x86_64.whl
+torchaudio @ https://download.pytorch.org/whl/cu116/torchaudio-0.13.1%2Bcu116-cp38-cp38-linux_x86_64.whl
+torchsummary==1.5.1
+torchtext==0.14.1
+torchvision @ https://download.pytorch.org/whl/cu116/torchvision-0.14.1%2Bcu116-cp38-cp38-linux_x86_64.whl
+
+fastapi         # API framework
+pytz            # time zone management
+uvicorn         # web server
+# tests
+httpx           # HTTP client
+pytest-asyncio  # asynchronous I/O support for pytest
+
+# Trick to install the version of Tensorflow depending on your processor: darwin == Mac, ARM == M1
+# tensorflow-macos==2.10.0; sys_platform == 'darwin' and 'ARM' in platform_version # Mac M-chips
+# tensorflow==2.10.0; sys_platform == 'darwin' and 'ARM' not in platform_version # Mac Intel chips
+tensorflow==2.10.0; sys_platform != 'darwin' # Windows & Ubuntu Intel chips
+
+# prevent bq 3+ db-dtypes package error when running training from bq

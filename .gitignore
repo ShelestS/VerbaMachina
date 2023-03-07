@@ -1,0 +1,8 @@
+/models/*
+*.pkl
+*.bin
+.env
+samplename-378401-845b4a7b63f0.json
+samplename-378401-845b4a7b63f0.json:Zone.Identifier
+__pycache__
+VerbaMachina.egg-info/
