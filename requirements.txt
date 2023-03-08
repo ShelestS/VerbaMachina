@@ -1,4 +1,4 @@
 streamlit
 requests
-PIL
+#PIL
 streamlit_chat
