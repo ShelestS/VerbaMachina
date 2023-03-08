@@ -15,7 +15,7 @@ st.markdown(
 """
 )
 
-st.image('/images.jpg', caption='Harry Potter')
-st.image('/images.jpg', caption='Spongebob')
-st.image('/images.jpg', caption='')
-st.image('/images.jpg', caption='')
+st.image('./images.jpg', caption='Harry Potter')
+st.image('./images.jpg', caption='Spongebob')
+st.image('./images.jpg', caption='')
+st.image('./images.jpg', caption='')
