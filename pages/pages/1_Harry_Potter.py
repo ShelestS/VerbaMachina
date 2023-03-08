@@ -67,8 +67,8 @@ st.session_state["output_history"].append(harry)
 
 if st.session_state["input_history"]:
         for i in range(len(st.session_state["input_history"])):
-            message(st.session_state["input_history"][i], key=str(i) + '_user', avatar_style="adventurer", is_user=True)
-            message(st.session_state["output_history"][i+1], key=str(i) + '_bot', avatar_style="big-ears", seed=123, is_user=False)
+            message(st.session_state["input_history"][i], key=str(i) + '_user', avatar_style="miniavs", seed='Felix', is_user=True)
+            message(st.session_state["output_history"][i+1], key=str(i) + '_bot', avatar_style="miniavs", seed='1678283728755', is_user=False)
 
 
 #input_ = st.text_input("you:")
