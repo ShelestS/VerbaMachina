@@ -2,3 +2,4 @@ streamlit
 requests
 #PIL
 streamlit_chat
+base64

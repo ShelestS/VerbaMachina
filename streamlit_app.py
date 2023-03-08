@@ -4,10 +4,42 @@ import pandas as pd
 #from streamlit_chat import message
 from streamlit_chat import message
 
+import base64
+def get_base64(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
+    <style>
+    .stApp {
+    background-image: url("data:image/jpg;base64,%s");
+    background-size: cover;
+    }
+    </style>
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+set_background('./images.jpg')
+# Add some CSS to the Streamlit app to align the text to the right
+st.markdown(
+    """
+    <style>
+    body {
+        text-align: right;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+# Write some text to the app
+'''
+# Chat with Harry Potter
+'''
 
 
 
-st.markdown("""# Harry Potter chat AI""")
+#st.markdown("""# Harry Potter chat AI""")
 
 #query = st.text_input('User:')
 
@@ -41,15 +73,16 @@ parameters = dict(
 
 response_api = requests.get(url, params=parameters).json()
 harry=response_api['response']
+harry = harry.replace('Harry: ', '')
 st.session_state["output_history"].append(harry)
 
 if st.session_state["input_history"]:
         for i in range(len(st.session_state["input_history"])):
             message(st.session_state["input_history"][i], key=str(i) + '_user', avatar_style="adventurer", is_user=True)
-            message(st.session_state["output_history"][i+1], key=str(i) + '_bot', avatar_style="lorelei", seed=123, is_user=False)
+            message(st.session_state["output_history"][i+1], key=str(i) + '_bot', avatar_style="big-ears", seed=123, is_user=False)
 
 
-
+#input_ = st.text_input("you:")
 #placeholder = st.empty()  # placeholder for latest message
 
 
