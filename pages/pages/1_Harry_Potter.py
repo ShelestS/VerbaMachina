@@ -4,7 +4,7 @@ import pandas as pd
 #from streamlit_chat import message
 from streamlit_chat import message
 
-st.image('/Users/marvinnaessig/code/ShelestS/VerbaMachina/images.jpg', caption='')
+st.image('../images.jpg', caption='')
 # Write some text to the app
 '''
 # Chat with Harry Potter

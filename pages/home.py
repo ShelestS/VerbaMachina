@@ -15,7 +15,7 @@ st.markdown(
 """
 )
 
-st.image('/Users/marvinnaessig/code/ShelestS/VerbaMachina/images.jpg', caption='Harry Potter')
-st.image('/Users/marvinnaessig/code/ShelestS/VerbaMachina/images.jpg', caption='Spongebob')
-st.image('/Users/marvinnaessig/code/ShelestS/VerbaMachina/images.jpg', caption='')
-st.image('/Users/marvinnaessig/code/ShelestS/VerbaMachina/images.jpg', caption='')
+st.image('../images.jpg', caption='Harry Potter')
+st.image('../images.jpg', caption='Spongebob')
+st.image('../images.jpg', caption='')
+st.image('../images.jpg', caption='')
